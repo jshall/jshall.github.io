@@ -1,5 +1,5 @@
 $cwidth: 600px; $vpad: 10px; $hpad: 15px;
-$theme-color: #080;
+$theme-color: #008800;
 
 body {
     margin: 0;
@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background: #444;
+    background: #444444;
     color: white;
     a { color: inherit; }
     .title {
@@ -17,6 +17,12 @@ header {
     }
     .container {
         background: inherit;
+    }
+}
+
+footer {
+    .container {
+        @include border-radius( 0 0 10px 10px );
     }
 }
 
@@ -41,14 +47,14 @@ nav {
 a {
     color: $theme-color;
     text-decoration: none;
+    &:hover {
+        text-shadow: 0 0 0.2em invert( complement( $theme-color ) );
+    }
     &.active {
         font-weight: bolder;
         &:hover {
             text-shadow: inherit;
         }
-    }
-    &:hover {
-        text-shadow: 0 0 0.2em invert(complement($theme-color));
     }
 }
 
