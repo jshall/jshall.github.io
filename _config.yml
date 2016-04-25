@@ -1,2 +1,4 @@
 exclude: ['CNAME']
 permalink: pretty
+sass:
+  style: compressed

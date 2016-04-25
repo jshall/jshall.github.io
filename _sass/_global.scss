@@ -1,0 +1,32 @@
+$cwidth: 600px; $vpad: 10px; $hpad: 15px;
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #080;
+}
+
+header {
+    background: #444;
+    color: white;
+    .container {
+        background: inherit;
+        .title {
+            font-size: 2em;
+            font-weight: bold;
+        }
+    }
+}
+
+.container {
+    margin: 0 $hpad;
+    background: white;
+    padding: $vpad $hpad;
+}
+
+@media (min-width: $cwidth + (2 * $hpad)) {
+    .container {
+        width: $cwidth;
+        margin: 0 auto;
+    }
+}
