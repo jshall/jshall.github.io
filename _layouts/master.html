@@ -1,0 +1,34 @@
+{% capture signature %}{% include signature.md %}{% endcapture %}
+{% capture signature %}{{ signature | markdownify}}{% endcapture %}
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jshall.net</title>
+        <meta name="decription" content="{{page.meta}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a class="title" href="{{site.baseurl}}">
+                    jshall.net
+                </a>
+                {% include nav.html class="text-center" %}
+            </div>
+        </header>
+        <div class="container">
+            <h2 class="text-center">{{ page.title }}</h2>
+            {{ content }}
+        </div>
+        <footer>
+            <div class="container text-center">
+                {% include nav.html %}
+                {{ signature }}
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.text-left-justify {
+    text-align: justify;
+    text-align-last: left;
+}
+.text-center-justify {
+    text-align: justify;
+    text-align-last: center;
+}
+.text-right-justify { 
+    text-align: justify;
+    text-align-last: right;
+}
