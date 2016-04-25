@@ -12,8 +12,11 @@ header {
     color: white;
     a { color: inherit; }
     .title {
-        font-size: 2em;
+        font-size: 32px;
         font-weight: bold;
+        img {
+            vertical-align: middle;
+        }
     }
     .container {
         background: inherit;
@@ -21,6 +24,7 @@ header {
 }
 
 footer {
+    margin-top: -$vpad;
     .container {
         @include border-radius( 0 0 10px 10px );
     }
