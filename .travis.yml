@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.2
 
-install: gem install jekyll html-proofer
+install: gem install jekyll octopress-minify-html html-proofer
 script: jekyll build && htmlproofer ./_site
 
 env:
