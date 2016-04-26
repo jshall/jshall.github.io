@@ -2,7 +2,5 @@ exclude:
   - CNAME
   - vendor
 permalink: pretty
-gems:
-  - octopress-minify-html
 sass:
   style: compressed
