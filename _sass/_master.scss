@@ -68,7 +68,7 @@ a {
     padding: $vpad $hpad;
 }
 
-@media (min-width: $cwidth + (2 * $hpad)) {
+@media (min-width: $cwidth + (4 * $hpad)) {
     .container {
         width: $cwidth;
         margin: 0 auto;

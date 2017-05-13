@@ -1,0 +1,33 @@
+---
+title: Starfield
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=350, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{page.title}}</title>
+    <style>
+        body { margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden; }
+        #canvas { position: absolute; z-index: -1; width: 100vw; height: 100vh; }
+        #saber { width: 20px; height: 300px; }
+        #blade { width: 20px; height: 250px; margin: 0 auto; background-color: #FF0000; display: block; }
+        #hilt { width: 10px; height: 50px; margin: 0 auto; background-color: silver; }
+        #text { font-size: 9vw; color: whitesmoke; }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="saber">
+        <img id="blade" src="lightsaber.png">
+        <div id="hilt"></div>
+    </div>
+    <div id="text">May the 4<sup>th</sup> be with you.</div>
+    <script src="color-temperature.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

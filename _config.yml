@@ -1,6 +1,7 @@
 exclude:
   - CNAME
   - vendor
+  - docker-compose.yml
 permalink: pretty
 sass:
   style: compressed
