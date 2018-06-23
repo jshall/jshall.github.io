@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jshall
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jshall.net
+  * I am jshall (https://keybase.io/jshall) on keybase.
+  * I have a public key ASAQPU9Xl5s0cBEWJc5jc5oF8-IY3Ne1AKN05GD8VSH51wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01203ee33b0ef6d603c15b78d0a15be0e626148db5487dc78319e030e346f082a4ac0a",
+      "host": "keybase.io",
+      "kid": "0120103d4f57979b3470111625ce63739a05f3e218dcd7b500a374e460fc5521f9d70a",
+      "uid": "2a49665ca582ecbb30361b356819dd19",
+      "username": "jshall"
+    },
+    "merkle_root": {
+      "ctime": 1529719846,
+      "hash": "b86fcdae7439ee48a73dc7c689ec35a205125f9822ab45b6d678d5ca9ccbeb4efd303de445d9813ff14583e4a58b54a103ace6c5c84ad7c66f0a65d0d4a6eae4",
+      "hash_meta": "0625e521c0762719bcb17c5be3f69e5f3d0c7d19637745341fb84508a1b9dbda",
+      "seqno": 3129516
+    },
+    "service": {
+      "entropy": "cGTOl0Lc+Xl87Rno/QwkGldu",
+      "hostname": "jshall.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.1.1"
+  },
+  "ctime": 1529719862,
+  "expire_in": 504576000,
+  "prev": "663354837dbc79af6cd89b9b9949d0ceb8e4eea892b01ee50292a7cb97050c8c",
+  "seqno": 33,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgED1PV5ebNHARFiXOY3OaBfPiGNzXtQCjdORg/FUh+dcKp3BheWxvYWTESpcCIcQgZjNUg328ea9s2JubmUnQzrjk7qiSsB7lApKny5cFDIzEIP2nEnGIaBWZb5FjROw57pDdzy9z7x1x6zSmDXz1IoAXAgHCo3NpZ8RAsOYAxcNNFVSlcrSYQZNHhZrih9OLfX2TYN3G/hfqX1C/v7yrCI10o/wigrub6mjCrdkxttKTmcwLUKUK07NhAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPa+uDcZWVPQeCoIOSITfsUtVB8dItz7n8ja50t7d4Uoo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jshall
+
+==================================================================
