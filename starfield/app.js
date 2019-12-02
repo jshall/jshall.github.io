@@ -1,6 +1,3 @@
-var starSpeed = 1 / 100;
-var stars = newStars(300);
-
 function newStars(starCount) {
     stars = [];
     for (var i = 0; i < starCount; i++) {
@@ -10,29 +7,31 @@ function newStars(starCount) {
 }
 
 function Star() {
-    randomize.apply(this);
-
-    function randomize() {
-        this.x = (Math.random() - 0.5) * 1.2;
-        this.y = (Math.random() - 0.5) * 1.2;
-        this.z = Math.random() * 2;
-
-        this.s = Math.random() * 2;
-        temp = Math.pow(10, Math.random() * 1.68 + 3.4);
-        color = colorTemperature2rgb(temp);
-        this.color = "rgb(" + color.red + "," + color.green + "," + color.blue + ")";
-    }
-
-    this.move = function move() {
-        this.z -= starSpeed;
-        if (this.z <= 0) {
-            randomize.apply(this);
-            this.z = 1;
-        }
-        return this;
-    }
+    this.randomize();
 }
 
+Star.prototype.randomize = function randomize() {
+    this.x = (Math.random() - 0.5) * 1.2;
+    this.y = (Math.random() - 0.5) * 1.2;
+    this.z = Math.random() * 2;
+
+    this.s = Math.random() * 2;
+    temp = Math.pow(10, Math.random() * 1.68 + 3.4);
+    color = colorTemperature2rgb(temp);
+    this.color = "rgb(" + color.red + "," + color.green + "," + color.blue + ")";
+}
+
+Star.prototype.move = function move() {
+    this.z -= starSpeed;
+    if (this.z <= 0) {
+        this.randomize();
+        this.z = 1;
+    }
+    return this;
+}
+
+var starSpeed = 1 / 100;
+var stars = newStars(300);
 (function () {
     function $(id) { return document.getElementById(id) }
 
