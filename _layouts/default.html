@@ -1,35 +1,35 @@
-{% capture signature %}{% include signature.md %}{% endcapture %}
-{% capture signature %}{{ signature | markdownify}}{% endcapture %}
-
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>{{ page.title }} | jshall.net</title>
-        <meta name="decription" content="{{page.meta}}">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% include favicon.html %}
-        <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <a class="title" href="{{site.baseurl}}/">
-                    <img src="{{site.baseurl}}/favicon/favicon-32x32.png" alt="logo" />
-                    jshall.net
-                </a>
-                {% comment %}{% include nav.html class="text-center" %}{% endcomment %}
-            </div>
-        </header>
+
+<head>
+    <meta charset="utf-8">
+    <title>{% if page.category %}{{ page.category }}: {% endif %}{{ page.title }} - jshall.net</title>
+    <meta name="decription" content="{{ page.meta }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include favicon.html %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+</head>
+
+<body>
+    <header>
         <div class="container">
-            <h1 class="text-center">{{ page.title }}</h1>
-            {{ content }}
+            <a class="title" href="{{ site.baseurl }}/">
+                <img src="{{ site.baseurl }}/favicon/favicon-32x32.png" alt="logo" />
+                jshall.net
+            </a>
+            {% comment %}{% include nav.html class="text-center" %}{% endcomment %}
         </div>
-        <footer>
-            <div class="container text-center">
-                {% comment %}{% include nav.html %}{% endcomment %}
-                {{ signature }}
-            </div>
-        </footer>
-    </body>
+    </header>
+    <div class="container">
+        {{ content }}
+    </div>
+    <footer>
+        <div class="container text-center">
+            <hr width="30%" />
+            {% capture signature %}{% include signature.md %}{% endcapture %}
+            {{ signature | markdownify }}
+        </div>
+    </footer>
+</body>
+
 </html>

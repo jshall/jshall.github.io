@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "eliostruyf.vscode-front-matter",
+        "ms-azuretools.vscode-docker",
+        "rohgarg.jekyll-post",
+        "sissel.shopify-liquid"
+    ]
+}
