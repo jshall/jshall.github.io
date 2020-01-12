@@ -5,3 +5,8 @@ exclude:
 permalink: pretty
 sass:
   style: compressed
+defaults:
+  - scope:
+      path: ""
+    values:
+      comments: true

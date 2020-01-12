@@ -1,6 +1,7 @@
 ---
 title: Home
 desciption: Josh Hall's homepage
+comments: false
 ---
 
 {:.text-center}
