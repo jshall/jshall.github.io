@@ -12,3 +12,6 @@ comments: false
 
 {:.text-center}
 [Trip to Kyiv](kyiv)
+
+{:.text-center}
+[Trip to Cherkasy](cherkasy)
