@@ -10,20 +10,43 @@ layout: default
 </h1>
 <div class="post-nav">
     <div class="prev">
-        {% if page.previous.url %}<a href="{{page.previous.url}}">{{page.previous.title}}</a>{% endif %}
+        {% if page.previous.url %}
+        <a href="{{page.previous.url}}">
+            {% if page.previous.category %}{{page.previous.category}}: {% endif %}
+            {{page.previous.title}}
+        </a>
+        {% endif %}
     </div>
     <h2 class="text-center">
+        {% if page.category %}{{page.category}}: {% endif %}
         {{ page.title }}<br />
         <small>{{ page.date | date: "%A, %b %e, %Y" }}</small>
     </h2>
     <div class="next">
-        {% if page.next.url %}<a href="{{page.next.url}}">{{page.next.title}}</a>{% endif %}</div>
+        {% if page.next.url %}
+        <a href="{{page.next.url}}">
+            {% if page.next.category %}{{page.next.category}}: {% endif %}
+            {{page.next.title}}
+        </a>
+        {% endif %}
+    </div>
 </div>
 {{ content }}
 <div class="post-nav">
     <div class="prev">
-        {% if page.previous.url %}<a href="{{page.previous.url}}">{{page.previous.title}}</a>{% endif %}
+        {% if page.previous.url %}
+        <a href="{{page.previous.url}}">
+            {% if page.previous.category %}{{page.previous.category}}: {% endif %}
+            {{page.previous.title}}
+        </a>
+        {% endif %}
     </div>
     <div class="next">
-        {% if page.next.url %}<a href="{{page.next.url}}">{{page.next.title}}</a>{% endif %}</div>
+        {% if page.next.url %}
+        <a href="{{page.next.url}}">
+            {% if page.next.category %}{{page.next.category}}: {% endif %}
+            {{page.next.title}}
+        </a>
+        {% endif %}
+    </div>
 </div>
