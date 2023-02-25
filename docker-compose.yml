@@ -3,7 +3,7 @@ version: '3'
 services:
 
   web:
-    image: jekyll/jekyll:pages
+    image: fleek/jekyll
     command: jekyll serve --watch --force_polling
     ports:
       - 4000:4000

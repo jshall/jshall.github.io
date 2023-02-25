@@ -2,6 +2,15 @@ exclude:
   - CNAME
   - vendor
   - docker-compose.yml
+plugins:
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
 permalink: pretty
 sass:
   style: compressed
