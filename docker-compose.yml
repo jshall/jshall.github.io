@@ -4,8 +4,9 @@ services:
 
   web:
     image: fleek/jekyll
-    command: jekyll serve --watch --force_polling
+    command: jekyll serve --drafts --watch --force_polling --livereload
     ports:
       - 4000:4000
+      - 35729:35729
     volumes:
       - .:/srv/jekyll

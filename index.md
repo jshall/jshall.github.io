@@ -4,14 +4,17 @@ desciption: Josh Hall's homepage
 comments: false
 ---
 
-{:.text-center}
-## Some interesting links
-
-{:.text-center}
-[May the 4th be with you.](starfield/)
-
-{:.text-center}
-[Trip to Kyiv](kyiv)
-
-{:.text-center}
-[Trip to Cherkasy](cherkasy)
+{% assign pages = site.pages | sort: 'url' %}
+- Pages
+{%- for page in pages -%}
+    {%- if page.title %}
+    - [{{ page.title }}]({{ page.url }})
+    {%- endif -%}
+{%- endfor %}
+- Posts
+{%- for cat in site.categories %}
+    - {{ cat[0] }}
+    {%- for post in cat[1] %}
+        - [{{ post.title }}]({{ post.url }})
+    {%- endfor -%}
+{%- endfor -%}

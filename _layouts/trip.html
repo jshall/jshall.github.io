@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<h1 class="text-center">
+    Trip to {{ page.category }}
+    <a target="album" href="https://photos.app.goo.gl/{{ layout.album }}" style="display: block; font-size: initial;">
+        📷 Photo Album 📷
+    </a>
+</h1>
+{% include post-header.html %}
+{{ content }}
+{% include post-footer.html %}

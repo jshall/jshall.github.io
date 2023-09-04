@@ -2,7 +2,9 @@
     <div class="prev">
         {% if page.previous.url %}
         <a href="{{page.previous.url}}">
-            {% if page.previous.category %}{{page.previous.category}}: {% endif %}
+            {% if page.previous.category and page.previous.category != page.category %}
+                {{page.previous.category}}:
+            {% endif %}
             {{page.previous.title}}
         </a>
         {% endif %}
@@ -10,7 +12,9 @@
     <div class="next">
         {% if page.next.url %}
         <a href="{{page.next.url}}">
-            {% if page.next.category %}{{page.next.category}}: {% endif %}
+            {% if page.next.category and page.next.category != page.category %}
+                {{page.next.category}}:
+            {% endif %}
             {{page.next.title}}
         </a>
         {% endif %}

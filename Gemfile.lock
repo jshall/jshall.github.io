@@ -47,9 +47,6 @@ GEM
       jekyll (>= 3.0, < 5.0)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
-    jekyll-github-metadata (2.15.0)
-      jekyll (>= 3.4, < 5.0)
-      octokit (~> 4.0, != 4.4.0)
     jekyll-optional-front-matter (0.3.2)
       jekyll (>= 3.0, < 5.0)
     jekyll-paginate (1.1.0)
@@ -105,7 +102,6 @@ DEPENDENCIES
   jekyll-coffeescript
   jekyll-default-layout
   jekyll-gist
-  jekyll-github-metadata
   jekyll-optional-front-matter
   jekyll-paginate
   jekyll-readme-index
@@ -113,4 +109,4 @@ DEPENDENCIES
   jekyll-titles-from-headings
 
 BUNDLED WITH
-   2.2.2
+   2.3.25
