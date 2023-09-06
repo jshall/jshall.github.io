@@ -1,0 +1,12 @@
+{% if site.url %}
+  {% assign site_url = site.url %}
+{% else %}
+  {% case jekyll.environment %}
+    {% when "production" %}
+      {% assign site_url = "https://jshall.net" %}
+    {% when "staging" %}
+      {% assign site_url = "https://preview.jshall.net" %}
+    {% else %}
+      {% assign site_url = "http://localhost" %}
+  {% endcase %}
+{% endif %}

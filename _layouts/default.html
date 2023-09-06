@@ -7,14 +7,15 @@
     <meta name="decription" content="{{ page.meta }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include favicon.html %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+    <link rel="cannonical" href="{{ site.url }}{{ page.url }}" />
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <a class="title" href="{{ site.baseurl }}/">
-                <img src="{{ site.baseurl }}/favicon/favicon-32x32.png" alt="logo" />
+            <a class="title" href="">
+                <img src="/favicon/favicon-32x32.png" alt="logo" />
                 jshall.net
             </a>
             {% comment %}{% include nav.html class="text-center" %}{% endcomment %}

@@ -4,7 +4,9 @@ services:
 
   web:
     image: fleek/jekyll
-    command: jekyll serve --drafts --watch --force_polling --livereload
+    environment:
+      - JEKYLL_ENV=development
+    command: jekyll serve --watch --force_polling --livereload --future --drafts
     ports:
       - 4000:4000
       - 35729:35729

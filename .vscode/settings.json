@@ -2,6 +2,7 @@
 {
     "files.exclude": {
         "**/.sass-cache": true,
+        "**/.jekyll-cache": true,
         "**/.jekyll-metadata": true
     },
     "search.exclude": {

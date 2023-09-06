@@ -14,8 +14,17 @@ plugins:
 permalink: pretty
 sass:
   style: compressed
+collections:
+  category_pages:
+    output: true
+    permalink: :path/
 defaults:
   - scope:
-      path: ""
+      type: posts
     values:
       comments: true
+  - scope:
+      path: css
+    values:
+      sitemap:
+        exclude: true

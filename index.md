@@ -1,7 +1,6 @@
 ---
 title: Home
 desciption: Josh Hall's homepage
-comments: false
 ---
 
 {% assign pages = site.pages | sort: 'url' %}
