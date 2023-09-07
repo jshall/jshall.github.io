@@ -1,1 +1,4 @@
-sitemap: https://jshall.net/sitemap.xml
+---
+---
+{% include site_url %}
+sitemap: {{ site_url }}/sitemap.xml

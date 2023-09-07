@@ -1,11 +1,13 @@
 ---
 ---
-{% include site_url %}
 <!doctype html>
 <html>
 
 <head>
+  {%- unless page.temporary %}
+  {%- include site_url %}
   <link rel="cannonical" href="{{ site_url }}{{ content }}" />
+  {%- endunless %}
   <meta http-equiv="refresh" content="0; URL={{ content }}" />
 </head>
 

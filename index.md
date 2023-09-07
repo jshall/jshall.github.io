@@ -2,7 +2,6 @@
 title: Home
 desciption: Josh Hall's homepage
 ---
-
 {% assign pages = site.pages | sort: 'url' %}
 - Pages
 {%- for page in pages -%}
@@ -11,6 +10,11 @@ desciption: Josh Hall's homepage
     {%- endif -%}
 {%- endfor %}
 - Posts
+{%- for post in site.posts %}
+    {%- unless post.category %}
+    - [{{ post.title }}]({{ post.url }})
+    {%- endunless %}
+{%- endfor %}
 {%- for cat in site.categories %}
     - {{ cat[0] }}
     {%- for post in cat[1] %}
