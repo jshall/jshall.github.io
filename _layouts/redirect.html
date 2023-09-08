@@ -6,9 +6,9 @@
 <head>
   {%- unless page.temporary %}
   {%- include site_url %}
-  <link rel="cannonical" href="{{ site_url }}{{ content }}" />
+  <link rel="cannonical" href="{{ site_url }}{{ page.target }}" />
   {%- endunless %}
-  <meta http-equiv="refresh" content="0; URL={{ content }}" />
+  <meta http-equiv="refresh" content="0; URL={{ page.target }}" />
 </head>
 
 </html>
