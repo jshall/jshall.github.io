@@ -1,0 +1,31 @@
+{% for item in include.items %}
+  <li>
+    {% if item.href %}
+      <a href="{{item.href}}">{{ item.title }}</a>
+    {% else %}
+      {{ item.title }}
+    {% endif %}
+    <ul>
+      {% if item.items %}
+        {% include nav.html items=item.items %}
+      {% endif %}
+      {% if item.category %}
+        {% if item.category == 'NONE' %}
+          {% for post in site.posts %}
+            {% unless post.category %}
+              <li>
+                <a href="{{post.url}}">{{ post.title }}</a>
+              </li>
+            {% endunless %}
+          {% endfor %}
+        {% else %}
+          {% for post in site.categories[item.category] %}
+            <li>
+              <a href="{{post.url}}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        {% endif %}
+      {% endif %}
+    </ul>
+  </li>
+{% endfor %}

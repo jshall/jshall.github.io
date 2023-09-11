@@ -12,55 +12,54 @@ body {
     padding: 0;
     background: $theme-color;
     min-width: 300px;
+    margin-top: 57px;
 }
 
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background: #444444;
     color: white;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    a {
-        color: inherit;
-    }
-
-    .title {
-        font-size: 32px;
-        font-weight: bold;
-
-        img {
-            vertical-align: middle;
-        }
-    }
-
-    .container {
-        background: inherit;
-    }
-}
-
-footer {
-    margin-top: -$vpad;
-
-    .container:last-of-type {
-        @include border-radius(0 0 10px 10px);
-    }
-}
-
-nav {
-    ul {
-        display: block;
-        margin: 0;
-        padding: 0;
-    }
-
-    li {
-        list-style: none;
-        display: inline;
-
-        &::after {
-            content: ' | ';
+    nav {
+        &.container {
+            background: inherit;
+            box-shadow: none;
+            clip-path: none;
         }
 
-        &:last-child::after {
-            content: '';
+        a {
+            display: block;
+            color: inherit;
+
+            &.title img {
+                vertical-align: middle;
+            }
+        }
+
+        >.menu {
+            float: right;
+        }
+
+        >.title,
+        >.menu {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        >ul {
+            position: relative;
+            // display: none;
+            overflow-y: auto;
+            max-height: calc(100vh - 80px);
+        }
+
+        li {
+            // display: block;
+            margin: 0.4em 0;
         }
     }
 }
@@ -109,11 +108,73 @@ a {
     margin: 0;
     background: white;
     padding: $vpad $hpad;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    clip-path: inset(0px -10px 0 -10px);
+
+    body>&:last-of-type {
+        clip-path: inset(0px -10px -10px -10px);
+    }
 }
 
 @media (min-width: $cwidth) {
+    header {
+        nav {
+            display: flex;
+            justify-content: space-between;
+
+            >.menu {
+                display: none;
+            }
+
+            >ul {
+                display: flex;
+                gap: 0.8em;
+                align-items: center;
+                justify-content: space-around;
+                margin: 0;
+                padding: 0;
+                font-size: 24px;
+                font-weight: bold;
+                overflow: visible;
+
+                >li {
+                    position: relative;
+                    text-align: center;
+                    min-width: 9rem;
+                    margin: 0;
+
+                    >ul {
+                        position: absolute;
+                        text-align: initial;
+                        top: 30px;
+                        width: 9rem;
+                        padding: 0 0.5em;
+                        @include border-radius(0 0 10px 10px);
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                        clip-path: inset(0px -10px -10px -10px);
+
+                        background: #444444;
+                        z-index: 1;
+
+                        font-size: 1rem;
+                        font-weight: normal;
+                    }
+                }
+            }
+
+            li {
+                display: block;
+            }
+        }
+    }
+
     .container {
         width: $cwidth;
         margin: 0 auto;
+
+        body>&:last-of-type {
+            @include border-radius(0 0 10px 10px);
+            margin-bottom: 1rem;
+        }
     }
 }

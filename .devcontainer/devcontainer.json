@@ -1,0 +1,11 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"sissel.shopify-liquid"
+			]
+		}
+	},
+	"forwardPorts": [4000,35729]
+}

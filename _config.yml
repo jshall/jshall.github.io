@@ -1,7 +1,5 @@
 exclude:
   - CNAME
-  - vendor
-  - docker-compose.yml
 plugins:
   - jekyll-coffeescript
   - jekyll-default-layout

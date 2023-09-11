@@ -1,7 +1,5 @@
 {
     "recommendations": [
-        "eliostruyf.vscode-front-matter",
-        "ms-azuretools.vscode-docker",
         "sissel.shopify-liquid"
     ]
 }

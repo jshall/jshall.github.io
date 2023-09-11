@@ -7,5 +7,13 @@
     },
     "search.exclude": {
         "**/_site": true
-    }
+    },
+    "emmet.includeLanguages": {
+        "liquid": "html"
+    },
+    "files.associations": {
+        "*.html": "liquid",
+        "*.md": "liquid"
+    },
+    "liquid.format.enable": true
 }

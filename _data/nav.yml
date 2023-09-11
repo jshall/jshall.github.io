@@ -1,0 +1,17 @@
+- title: Projects
+  items:
+  - title: Starfield
+    href: /projects/starfield
+  - title: Sudoku
+    href: /projects/sudoku
+- title: Posts
+  category: NONE
+  items: 
+  - title: Trip to Kyiv
+    href: /kyiv
+    category: Kyiv
+    reverse: true
+  - title: Trip to Cherkasy
+    href: /cherkasy
+    category: Cherkasy
+    reverse: true

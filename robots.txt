@@ -1,4 +1,12 @@
 ---
+sitemap:
+    exclude: true
 ---
-{% include site_url %}
-sitemap: {{ site_url }}/sitemap.xml
+{% case jekyll.environment %}
+  {% when "production" %}
+  {% include site_url %}
+  Sitemap: {{ site_url }}/sitemap.xml
+{% else %}
+  User-agent: *
+  Disallow: /
+{% endcase %}
