@@ -7,11 +7,11 @@
 - title: Posts
   category: NONE
   items: 
-  - title: Trip to Kyiv
-    href: /kyiv
-    category: Kyiv
-    reverse: true
   - title: Trip to Cherkasy
     href: /cherkasy
     category: Cherkasy
+    reverse: true
+  - title: Trip to Kyiv
+    href: /kyiv
+    category: Kyiv
     reverse: true

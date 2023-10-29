@@ -1,5 +1,5 @@
 {% for item in include.items %}
-  <li>
+  <li class="{{include.class}}">
     {% if item.href %}
       <a href="{{item.href}}">{{ item.title }}</a>
     {% else %}

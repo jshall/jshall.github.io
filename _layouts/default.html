@@ -7,7 +7,7 @@
       {% if page.category %}
         {{ page.category }}:
       {% endif %}
-      {{ page.title }} - jshall.net</title>
+        {{ page.title }} - jshall.net</title>
     <meta name="decription" content="{{ page.meta }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include favicon.html %}
@@ -18,13 +18,19 @@
   <body>
     <header>
       <nav class="container">
-        <div class="menu">M</div>
+        <svg class="menu" viewbox="0 0 60 40">
+          <g stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <path id="top-line" d="M10,10 L50,10 Z"></path>
+            <path id="middle-line" d="M10,20 L50,20 Z"></path>
+            <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+          </g>
+        </svg>
         <a class="title" href="/">
           <img src="/favicon/favicon-32x32.png" alt="logo" />
           jshall.net
         </a>
         <ul>
-          {% include nav.html items=site.data.nav %}
+          {% include nav.html items=site.data.nav class="top-level" %}
         </ul>
       </nav>
     </header>
@@ -43,6 +49,28 @@
         })();
       </script>
     {% endif %}
+    <script>
+      (function() {
+        const nav = document.querySelector('header>nav')
+        const menu = document.querySelector('svg.menu')
+        menu.addEventListener('click', evt => nav.classList.toggle('expanded'))
+        document.querySelectorAll('li.top-level').forEach(item => {
+          let timer = null
+          item.addEventListener("click", evt => item.classList.add('expanded'))
+          item.addEventListener("mouseenter", evt => {
+            if (evt.target == item) {
+              clearTimeout(timer)
+              item.classList.add('expanded')
+            }
+          })
+          item.addEventListener("mouseleave", evt => {
+            if (evt.target == item) {
+              timer = setTimeout(() => item.classList.remove('expanded'), 200)
+            }
+          })
+        })
+      })()
+    </script>
   </body>
 
 </html>
